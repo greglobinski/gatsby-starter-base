@@ -1,3 +1,5 @@
+const path = require('path');
+
 exports.onCreateWebpackConfig = ({
   stage,
   rules,
@@ -9,7 +11,7 @@ exports.onCreateWebpackConfig = ({
     case 'build-javascript':
       actions.setWebpackConfig({
         module: {
-          use: [
+          rules: [
             {
               test: /\.yaml$/,
               include: path.resolve('data'),
