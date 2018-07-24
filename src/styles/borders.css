@@ -1,0 +1,33 @@
+body {
+  padding: 10px;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+.layout,
+.header,
+.footer {
+  color: #ddd;
+  border: 1px solid currentColor;
+  padding: 20px;
+}
+
+.header,
+.footer {
+  color: #999;
+  border-color: currentColor;
+}
