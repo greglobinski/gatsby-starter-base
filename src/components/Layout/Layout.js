@@ -4,11 +4,19 @@ import React from 'react';
 import config from '../../../content/meta/config';
 import Footer from '../Footer';
 import Header from '../Header';
+import Seo from '../Seo';
 
 import '../../styles/borders.css';
 
 const Layout = ({ children }) => {
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteTitle,
+    siteDescription,
+    siteLanguage,
+    siteUrl,
+  } = config;
 
   return (
     <StaticQuery
@@ -29,6 +37,12 @@ const Layout = ({ children }) => {
             <Header title={headerTitle} subTitle={headerSubTitle} />
             {children}
             <Footer footnote={footnote} />
+            <Seo
+              language={siteLanguage}
+              siteTitle={siteTitle}
+              siteDescription={siteDescription}
+              siteUrl={siteUrl}
+            />
           </div>
         );
       }}

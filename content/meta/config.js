@@ -1,7 +1,7 @@
 const base = {
   name: 'BaseStarter',
   url: 'https://gatsby-starter-base.greglobinski.com',
-  author: 'greg lobinski'
+  author: 'greg lobinski',
 };
 
 const config = {
@@ -25,9 +25,9 @@ const config = {
   authorSocialLinks: [
     { name: 'github', url: 'https://github.com/greglobinski' },
     { name: 'twitter', url: 'https://twitter.com/greglobinski' },
-    { name: 'facebook', url: 'http://facebook.com/greglobinski' }
+    { name: 'facebook', url: 'http://facebook.com/greglobinski' },
   ], // copyright
-  copyrightNote: `Created by ${base.author}, licensed under MIT`
+  copyrightNote: `Created by ${base.author}, licensed under MIT`,
 };
 
 module.exports = config;
