@@ -1,11 +1,10 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const Footer = props => {
   const {
     footnote: { html = '' },
-    copyrightNote = 'Copyright 2018, all rights reserved'
+    copyrightNote = 'Copyright 2018, all rights reserved',
   } = props;
 
   return (
@@ -18,9 +17,9 @@ const Footer = props => {
 
 Footer.propTypes = {
   footnote: PropTypes.shape({
-    html: PropTypes.string
+    html: PropTypes.string,
   }),
-  copyrightNote: PropTypes.string
+  copyrightNote: PropTypes.string,
 };
 
 export default Footer;

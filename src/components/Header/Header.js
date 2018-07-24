@@ -2,19 +2,22 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import config from '../../../content/meta/config';
-
 const Header = props => {
+  const { title, subTitle } = props;
+
   return (
     <header className="header">
       <Link to="/">
-        <h1>{config.headerTitle}</h1>
-        <h2>{config.headerSubTitle}</h2>
+        <h1>{title}</h1>
+        <h2>{subTitle}</h2>
       </Link>
     </header>
   );
 };
 
-Header.propTypes = {};
+Header.propTypes = {
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
+};
 
 export default Header;

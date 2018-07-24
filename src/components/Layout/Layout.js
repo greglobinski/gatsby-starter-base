@@ -8,7 +8,7 @@ import Header from '../Header';
 import '../../styles/borders.css';
 
 const Layout = ({ children }) => {
-  const { siteUrl, copyrightNote } = config;
+  const { headerTitle, headerSubTitle } = config;
 
   return (
     <StaticQuery
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
         return (
           <div className="layout">
-            <Header />
+            <Header title={headerTitle} subTitle={headerSubTitle} />
             {children}
             <Footer footnote={footnote} />
           </div>
@@ -37,13 +37,3 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
-
-{
-  /* <>
-  <Helmet titleTemplate={`%s | ${data.site.siteMetadata.title}`
-  } defaultTitle={data.site.siteMetadata.title} />
-  <div>
-    {children}
-  </div >
-</> */
-}
