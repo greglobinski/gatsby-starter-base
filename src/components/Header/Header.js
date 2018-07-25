@@ -2,21 +2,20 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Branding from './Branding';
+
 const Header = props => {
-  const { title, subTitle } = props;
+  const { title, subTitle = '' } = props;
 
   return (
     <header className="header">
-      <Link to="/">
-        <h1>{title}</h1>
-        <h2>{subTitle}</h2>
-      </Link>
+      <Branding title={title} subTitle={subTitle} />
     </header>
   );
 };
 
 Header.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   subTitle: PropTypes.string,
 };
 
