@@ -3,15 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 const Seo = props => {
-  const {
-    language = 'en',
-    siteTitle,
-    siteDescription,
-    siteUrl,
-    title = siteTitle,
-    description = siteDescription,
-    url = siteUrl,
-  } = props;
+  const { language, url, title, description } = props;
 
   console.log(props);
 
@@ -55,13 +47,9 @@ const Seo = props => {
 };
 
 Seo.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
-  siteDescription: PropTypes.string.isRequired,
-  siteUrl: PropTypes.string.isRequired,
-  language: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  facebook: PropTypes.object,
+  language: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default Seo;

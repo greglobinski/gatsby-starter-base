@@ -4,15 +4,19 @@ import Article from '../components/Article';
 import Heading from '../components/Article/Heading';
 import Bodytext from '../components/Article/Bodytext';
 
-const NotFoundPage = () => (
-  <Layout>
-    <Article>
-      <Heading title="NOT FOUND" />
-      <Bodytext>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </Bodytext>
-    </Article>
-  </Layout>
-);
+const NotFoundPage = props => {
+  const { location } = props;
+
+  return (
+    <Layout location={location}>
+      <Article>
+        <Heading title="NOT FOUND" />
+        <Bodytext>
+          <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        </Bodytext>
+      </Article>
+    </Layout>
+  );
+};
 
 export default NotFoundPage;
