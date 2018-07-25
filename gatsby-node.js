@@ -50,6 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
           ) {
             edges {
               node {
+                fileAbsolutePath
                 fields {
                   slug
                   identifier
@@ -71,8 +72,12 @@ exports.createPages = ({ graphql, actions }) => {
 
         const items = result.data.allMarkdownRemark.edges;
 
+        console.log(items);
+
         // Create posts
-        const posts = items.filter(item => /posts/.test(item.node.id));
+        const posts = items.filter(item =>
+          /posts/.test(item.node.fileAbsolutePath)
+        );
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug;
           const identifier = node.fields.identifier;
