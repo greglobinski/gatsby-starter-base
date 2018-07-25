@@ -1,24 +1,25 @@
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
+import 'prismjs/themes/prism-okaidia.css';
+
 import Article from '../components/Article';
+import Layout from '../components/Layout';
 import Post from '../components/Post';
-
-require('prismjs/themes/prism-okaidia.css');
 
 const PostTemplate = props => {
   const {
-    location,
-    data: { post },
-    pathContext: { next, prev },
+    data: {
+      post,
+      authorNote: { html: authorNote },
+    },
   } = props;
 
   return (
-    <Layout location={location}>
+    <Layout>
       <Article>
-        <Post post={post} next={next} prev={prev} />
+        <Post post={post} authorNote={authorNote} />
       </Article>
     </Layout>
   );
@@ -26,13 +27,13 @@ const PostTemplate = props => {
 
 PostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
-  pathContext: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
 };
 
 export default PostTemplate;
 
-export const postQuery = graphql`
-  query PostBySlug($slug: String!, $identifier: String!) {
+export const query = graphql`
+  query($slug: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
@@ -44,7 +45,17 @@ export const postQuery = graphql`
       frontmatter {
         title
         category
+        cover {
+          childImageSharp {
+            resize(width: 800, height: 360) {
+              src
+            }
+          }
+        }
       }
+    }
+    authorNote: markdownRemark(fileAbsolutePath: { regex: "/authorNote/" }) {
+      html
     }
   }
 `;
