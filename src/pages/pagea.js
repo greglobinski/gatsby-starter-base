@@ -4,13 +4,13 @@ import Article from '../components/Article';
 import Heading from '../components/Article/Heading';
 import Bodytext from '../components/Article/Bodytext';
 
-const Index = props => {
+const PageA = props => {
   const { location } = props;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} seoTitle="Page A">
       <Article>
-        <Heading title="Hello world!" />
+        <Heading title="Page A" />
         <Bodytext>
           <p>
             But it's just not ... I'm not fair game. I'm not a soft target. It's
@@ -83,4 +83,4 @@ const Index = props => {
   );
 };
 
-export default Index;
+export default PageA;
