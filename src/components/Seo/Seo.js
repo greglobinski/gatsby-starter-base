@@ -5,8 +5,6 @@ import Helmet from 'react-helmet';
 const Seo = props => {
   const { language, url, title, description } = props;
 
-  console.log(props);
-
   return (
     <Helmet
       htmlAttributes={{ lang: language, prefix: 'og: http://ogp.me/ns#' }}

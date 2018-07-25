@@ -12,8 +12,6 @@ import '../../styles/graph.css';
 const Layout = props => {
   const { children, location, seoTitle = '', seoDescription = '' } = props;
 
-  console.log(location);
-
   const {
     headerTitle,
     headerSubTitle,
@@ -37,12 +35,19 @@ const Layout = props => {
       render={data => {
         const { footnote } = data;
 
-        return <div className="layout">
+        return (
+          <div className="layout">
             <Header title={headerTitle} subTitle={headerSubTitle} />
             {children}
             <Footer footnote={footnote} />
-            <Seo language={siteLanguage} title={seoTitle ? seoTitle : siteTitle} description={seoDescription ? seoDescription : siteDescription} url={siteUrl} />
-          </div>;
+            <Seo
+              language={siteLanguage}
+              title={seoTitle ? seoTitle : siteTitle}
+              description={seoDescription ? seoDescription : siteDescription}
+              url={siteUrl}
+            />
+          </div>
+        );
       }}
     />
   );
