@@ -39,6 +39,9 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve('./src/templates/PostTemplate.js');
+    const categoryTemplate = path.resolve(
+      './src/templates/CategoryTemplate.js'
+    );
 
     resolve(
       graphql(`
@@ -71,6 +74,32 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const items = result.data.allMarkdownRemark.edges;
+
+        // Create category list
+        const categorySet = new Set();
+        items.forEach(edge => {
+          const {
+            node: {
+              frontmatter: { category },
+            },
+          } = edge;
+
+          if (category && category !== null) {
+            categorySet.add(category);
+          }
+        });
+
+        // Create category pages
+        const categoryList = Array.from(categorySet);
+        categoryList.forEach(category => {
+          createPage({
+            path: `/category/${_.kebabCase(category)}/`,
+            component: categoryTemplate,
+            context: {
+              category,
+            },
+          });
+        });
 
         // Create posts
         const posts = items.filter(item =>
