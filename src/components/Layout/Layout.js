@@ -38,7 +38,7 @@ const Layout = props => {
         return (
           <div className="layout">
             <Header title={headerTitle} subTitle={headerSubTitle} />
-            {children}
+            <main>{children}</main>
             <Footer footnote={footnote} />
             <Seo
               language={siteLanguage}
