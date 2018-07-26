@@ -6,7 +6,7 @@ const Branding = props => {
   const { title, subTitle } = props;
 
   return (
-    <Link className="brand" to="/">
+    <Link className="branding" to="/">
       <h1>{title}</h1>
       <h2>{subTitle}</h2>
     </Link>
