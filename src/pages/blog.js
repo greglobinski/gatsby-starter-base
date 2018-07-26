@@ -26,8 +26,8 @@ const BlogPage = props => {
 
 export default BlogPage;
 
-export const guery = graphql`
-  query BlogQuery {
+export const query = graphql`
+  query {
     posts: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
       sort: { fields: [fields___prefix], order: DESC }
