@@ -6,21 +6,13 @@ import config from '../../../content/meta/config';
 import menu from '../../../content/meta/menu';
 import Footer from '../Footer';
 import Header from '../Header';
-import Seo from '../Seo';
 
 import '../../styles/graph.css';
 
 const Layout = props => {
-  const { children, location, seoTitle = '', seoDescription = '' } = props;
+  const { children } = props;
 
-  const {
-    headerTitle,
-    headerSubTitle,
-    siteTitle,
-    siteDescription,
-    siteLanguage,
-    siteUrl,
-  } = config;
+  const { headerTitle, headerSubTitle } = config;
 
   return (
     <StaticQuery
@@ -41,12 +33,6 @@ const Layout = props => {
             <Header title={headerTitle} subTitle={headerSubTitle} menu={menu} />
             <main>{children}</main>
             <Footer footnote={footnote} />
-            <Seo
-              language={siteLanguage}
-              title={seoTitle ? seoTitle : siteTitle}
-              description={seoDescription ? seoDescription : siteDescription}
-              url={siteUrl}
-            />
           </div>
         );
       }}
@@ -56,9 +42,6 @@ const Layout = props => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.object,
-  seoTitle: PropTypes.string,
-  seoDescription: PropTypes.string,
 };
 
 export default Layout;

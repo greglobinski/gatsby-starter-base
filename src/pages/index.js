@@ -1,8 +1,10 @@
 import React from 'react';
-import Layout from '../components/Layout';
+
 import Article from '../components/Article';
-import Heading from '../components/Article/Heading';
 import Bodytext from '../components/Article/Bodytext';
+import Heading from '../components/Article/Heading';
+import Layout from '../components/Layout';
+import Seo from '../components/Seo';
 
 const IndexPage = props => {
   const { location } = props;
@@ -15,6 +17,7 @@ const IndexPage = props => {
           <p>That's a home page content</p>
         </Bodytext>
       </Article>
+      <Seo />
     </Layout>
   );
 };

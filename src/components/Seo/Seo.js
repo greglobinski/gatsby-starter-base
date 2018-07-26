@@ -2,8 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
+import config from '../../../content/meta/config';
+
 const Seo = props => {
-  const { language, url, title, description } = props;
+  const {
+    siteTitle,
+    siteTitlePostfix,
+    siteDescription,
+    siteLanguage,
+    siteUrl,
+  } = config;
+
+  let { language, path, title, description } = props;
+
+  language = language ? language : siteLanguage;
+  title = title ? title + siteTitlePostfix : siteTitle;
+  description = description ? description : siteDescription;
+
+  const url = path ? siteUrl + path : siteUrl;
 
   return (
     <Helmet
@@ -45,9 +61,10 @@ const Seo = props => {
 };
 
 Seo.propTypes = {
-  language: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  language: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  path: PropTypes.string,
 };
 
 export default Seo;
