@@ -7,10 +7,8 @@ import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 
 const IndexPage = props => {
-  const { location } = props;
-
   return (
-    <Layout location={location}>
+    <Layout>
       <Article>
         <Heading title="Hello world!" />
         <Bodytext>

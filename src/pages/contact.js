@@ -12,7 +12,7 @@ const ContactPage = props => {
   } = props;
 
   return (
-    <Layout seoTitle="Page A">
+    <Layout>
       <Article>
         <Heading title="Contact" />
         <Bodytext>
