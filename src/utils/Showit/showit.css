@@ -68,15 +68,20 @@ ul {
 .heading.showit,
 .meta.showit,
 .bodytext.showit,
-.blogItem.showit {
+.blogItem.showit,
+.comments.showit,
+.share.showit,
+.author.showit,
+.nextPrev.showit {
   background: #ccc;
 }
 
 .bodytext.showit p {
   margin: 0 0 2em 0;
+  line-height: 1.3;
 }
 
-.bodytext.showit p:last-child {
+.bodytext.showit p:nth-last-child(2) {
   margin: 0;
 }
 
@@ -106,9 +111,9 @@ ul {
 }
 
 .footer.showit,
-.bodytext.showit,
 .menu.showit,
-.blogItem.showit {
+.blogItem.showit,
+.comments.showit {
   margin-bottom: 0;
 }
 .branding.showit {

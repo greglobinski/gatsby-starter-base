@@ -25,6 +25,10 @@ class Showit extends React.Component {
       'page',
       'article post',
       'article page',
+      'comments',
+      'author',
+      'nextPrev',
+      'share',
     ];
 
     const components = document.querySelectorAll('[class]');
