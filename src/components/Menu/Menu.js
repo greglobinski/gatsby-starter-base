@@ -8,7 +8,7 @@ const Menu = props => {
   const { items } = props;
 
   return (
-    <nav>
+    <nav className="menu">
       <ul>
         {items.map(item => {
           const { label, to, icon } = item;
