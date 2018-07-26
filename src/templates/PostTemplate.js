@@ -35,7 +35,6 @@ export default PostTemplate;
 export const query = graphql`
   query($slug: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
       html
       fileAbsolutePath
       fields {
@@ -45,13 +44,6 @@ export const query = graphql`
       frontmatter {
         title
         category
-        cover {
-          childImageSharp {
-            resize(width: 800, height: 360) {
-              src
-            }
-          }
-        }
       }
     }
     authorNote: markdownRemark(fileAbsolutePath: { regex: "/authorNote/" }) {

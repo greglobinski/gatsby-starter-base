@@ -1,6 +1,7 @@
 const config = require('./content/meta/config');
 
 module.exports = {
+  pathPrefix: '/gatsby-starter-base',
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
@@ -21,34 +22,21 @@ module.exports = {
         path: `${__dirname}/content/posts/`,
       },
     },
+    // `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
-            options: {},
-          },
-          {
-            resolve: `gatsby-plugin-sharp`,
-          },
-          {
-            resolve: `gatsby-transformer-sharp`,
-          },
-          {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 800,
-              backgroundColor: 'transparent',
+              maxWidth: 690,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 2em`,
-            },
-          },
-
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-responsive-iframe`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
@@ -74,6 +62,5 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-catch-links`,
   ],
 };
