@@ -39,12 +39,17 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
+    const postTemplate = path.resolve('./src/templates/PostTemplate.js');
+    const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
+    const categoryTemplate = path.resolve(
+      './src/templates/CategoryTemplate.js'
+    );
 
     resolve(
       graphql(`
         {
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "//pages//" } }
+            filter: { fileAbsolutePath: { regex: "//posts|pages//" } }
             sort: { fields: [fields___prefix], order: DESC }
             limit: 1000
           ) {
@@ -58,6 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
                 }
                 frontmatter {
                   title
+                  category
                 }
               }
             }
@@ -70,6 +76,55 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const items = result.data.allMarkdownRemark.edges;
+
+        // Create category list
+        const categorySet = new Set();
+        items.forEach(edge => {
+          const {
+            node: {
+              frontmatter: { category },
+            },
+          } = edge;
+
+          if (category && category !== null) {
+            categorySet.add(category);
+          }
+        });
+
+        // Create category pages
+        const categoryList = Array.from(categorySet);
+        categoryList.forEach(category => {
+          createPage({
+            path: `/category/${_.kebabCase(category)}/`,
+            component: categoryTemplate,
+            context: {
+              category,
+            },
+          });
+        });
+
+        // Create posts
+        const posts = items.filter(item =>
+          /posts/.test(item.node.fileAbsolutePath)
+        );
+        posts.forEach(({ node }, index) => {
+          const slug = node.fields.slug;
+          const identifier = node.fields.identifier;
+          const next = index === 0 ? undefined : posts[index - 1].node;
+          const prev =
+            index === posts.length - 1 ? undefined : posts[index + 1].node;
+
+          createPage({
+            path: slug,
+            component: postTemplate,
+            context: {
+              slug,
+              identifier,
+              prev,
+              next,
+            },
+          });
+        });
 
         // and pages.
         const pages = items.filter(item =>
