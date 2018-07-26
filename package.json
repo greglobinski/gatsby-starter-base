@@ -14,7 +14,6 @@
     "gatsby": "2.0.0-beta.56",
     "gatsby-image": "2.0.0-beta.7",
     "gatsby-plugin-catch-links": "2.0.2-beta.4",
-    "gatsby-plugin-feed": "2.0.0-beta.4",
     "gatsby-plugin-google-analytics": "2.0.0-beta.3",
     "gatsby-plugin-react-helmet": "3.0.0-beta.4",
     "gatsby-plugin-sharp": "2.0.0-beta.7",
@@ -29,6 +28,7 @@
   },
   "devDependencies": {
     "babel-eslint": "7.2.3",
+    "dotenv": "^6.0.0",
     "eslint": "4.1.1",
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "2.34.1",
