@@ -23,14 +23,16 @@ ul {
 .header,
 .article,
 .footer,
-.bodytext {
+.bodytext,
+.blog {
   color: #ddd;
   border: 1px solid currentColor;
 }
 
 .article,
 .header,
-.footer {
+.footer,
+.blog {
   color: #999;
   border-color: currentColor;
   margin: 30px;
