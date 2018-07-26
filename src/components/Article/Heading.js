@@ -5,9 +5,7 @@ const Heading = props => {
   const { title, children } = props;
 
   return (
-    <header className="heading">
-      {title ? <h1>{title}</h1> : { children }}
-    </header>
+    <header className="heading">{title ? <h1>{title}</h1> : children}</header>
   );
 };
 
