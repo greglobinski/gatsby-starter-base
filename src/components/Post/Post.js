@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 //import Loadable from "react-loadable";
 
+import Article from '../Article';
 import Heading from '../Article/Heading';
 import Bodytext from '../Article/Bodytext';
 import Meta from './Meta';
@@ -34,7 +35,7 @@ const Post = props => {
   } = props;
 
   return (
-    <React.Fragment>
+    <Article className="post">
       <header>
         <Heading title={title} />
         <Meta prefix={prefix} category={category} />
@@ -46,7 +47,7 @@ const Post = props => {
         <NextPrev next={nextPost} prev={prevPost} />
         <Comments slug={slug} siteUrl={siteUrl} />
       </footer>
-    </React.Fragment>
+    </Article>
   );
 };
 

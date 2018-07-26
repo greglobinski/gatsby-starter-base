@@ -6,7 +6,7 @@ const Comments = props => {
   const { slug, siteUrl } = props;
 
   return (
-    <div id="post-comments" className="comments">
+    <div className="comments">
       <FacebookProvider appId={process.env.GATSBY_FACEBOOK_APPID}>
         <FBComments
           href={`${siteUrl}${slug}`}

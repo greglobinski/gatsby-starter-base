@@ -6,7 +6,7 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Item = props => {
+const BlogItem = props => {
   const {
     post: {
       excerpt,
@@ -16,7 +16,7 @@ const Item = props => {
   } = props;
 
   return (
-    <li>
+    <li className="blogItem">
       <Link to={slug} key={slug} className="link">
         <h1>{title}</h1>
         <p className="meta">
@@ -32,13 +32,14 @@ const Item = props => {
             </span>
           )}
         </p>
+        <p>{excerpt}</p>
       </Link>
     </li>
   );
 };
 
-Item.propTypes = {
+BlogItem.propTypes = {
   post: PropTypes.object.isRequired,
 };
 
-export default Item;
+export default BlogItem;
