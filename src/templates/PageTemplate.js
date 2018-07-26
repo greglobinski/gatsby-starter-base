@@ -4,20 +4,21 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
-import Article from '../components/Article';
 import Layout from '../components/Layout';
 import Page from '../components/Page';
+import Seo from '../components/Seo';
 
 const PageTemplate = props => {
   const {
     data: { page },
+    frontmatter: { title },
+    fields: { slug },
   } = props;
 
   return (
     <Layout>
-      <Article>
-        <Page page={page} />
-      </Article>
+      <Page page={page} />
+      <Seo title={title} path={slug} />
     </Layout>
   );
 };
