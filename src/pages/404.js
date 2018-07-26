@@ -5,10 +5,8 @@ import Heading from '../components/Article/Heading';
 import Bodytext from '../components/Article/Bodytext';
 
 const NotFoundPage = props => {
-  const { location } = props;
-
   return (
-    <Layout location={location}>
+    <Layout>
       <Article>
         <Heading title="NOT FOUND" />
         <Bodytext>

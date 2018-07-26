@@ -1,20 +1,25 @@
 import React from 'react';
-import Layout from '../components/Layout';
+
 import Article from '../components/Article';
-import Heading from '../components/Article/Heading';
 import Bodytext from '../components/Article/Bodytext';
+import Heading from '../components/Article/Heading';
+import Layout from '../components/Layout';
+import Seo from '../components/Seo';
 
 const ContactPage = props => {
-  const { location } = props;
+  const {
+    location: { pathname },
+  } = props;
 
   return (
-    <Layout location={location} seoTitle="Page A">
+    <Layout>
       <Article>
         <Heading title="Contact" />
         <Bodytext>
           <p>Send me an email.</p>
         </Bodytext>
       </Article>
+      <Seo title="Contact" path={pathname} />
     </Layout>
   );
 };
