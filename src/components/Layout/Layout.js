@@ -10,7 +10,7 @@ import Header from '../Header';
 import '../../styles/graph.css';
 
 const Layout = props => {
-  const { children, location } = props;
+  const { children } = props;
 
   const { headerTitle, headerSubTitle } = config;
 
@@ -42,9 +42,6 @@ const Layout = props => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.object,
-  seoTitle: PropTypes.string,
-  seoDescription: PropTypes.string,
 };
 
 export default Layout;
