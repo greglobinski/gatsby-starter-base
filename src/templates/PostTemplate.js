@@ -4,23 +4,29 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
-import Article from '../components/Article';
+import config from '../../content/meta/config';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
+import Seo from '../components/Seo';
 
 const PostTemplate = props => {
   const {
     data: {
       post,
+      post: {
+        fields: { slug },
+        frontmatter: { title },
+      },
       authorNote: { html: authorNote },
     },
   } = props;
 
+  const { siteUrl } = config;
+
   return (
     <Layout>
-      <Article>
-        <Post post={post} authorNote={authorNote} />
-      </Article>
+      <Post post={post} authorNote={authorNote} siteUrl={siteUrl} />
+      <Seo title={title} path={slug} />
     </Layout>
   );
 };

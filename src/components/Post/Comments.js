@@ -2,16 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FacebookProvider, { Comments as FBComments } from 'react-facebook';
 
-import config from '../../../content/meta/config';
-
 const Comments = props => {
-  const { facebook = '340409213030244', slug } = props;
+  const { slug, siteUrl } = props;
 
   return (
-    <div id="post-comments" className="comments">
-      <FacebookProvider appId={facebook}>
+    <div className="comments">
+      <FacebookProvider appId={process.env.GATSBY_FACEBOOK_APPID}>
         <FBComments
-          href={`${config.siteUrl}${slug}`}
+          href={`${siteUrl}${slug}`}
           width="100%"
           colorScheme="light"
         />
@@ -22,7 +20,7 @@ const Comments = props => {
 
 Comments.propTypes = {
   slug: PropTypes.string.isRequired,
-  facebook: PropTypes.object,
+  siteUrl: PropTypes.string.isRequired,
 };
 
 export default Comments;
