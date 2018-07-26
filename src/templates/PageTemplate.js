@@ -6,35 +6,32 @@ import 'prismjs/themes/prism-okaidia.css';
 
 import Article from '../components/Article';
 import Layout from '../components/Layout';
-import Post from '../components/Post';
+import Page from '../components/Page';
 
-const PostTemplate = props => {
+const PageTemplate = props => {
   const {
-    data: {
-      post,
-      authorNote: { html: authorNote },
-    },
+    data: { page },
   } = props;
 
   return (
     <Layout>
       <Article>
-        <Post post={post} authorNote={authorNote} />
+        <Page page={page} />
       </Article>
     </Layout>
   );
 };
 
-PostTemplate.propTypes = {
+PageTemplate.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
 };
 
-export default PostTemplate;
+export default PageTemplate;
 
 export const query = graphql`
-  query PostTemplateQuery($slug: String!) {
-    post: markdownRemark(fields: { slug: { eq: $slug } }) {
+  query PageTemplateQuery($slug: String!) {
+    page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fileAbsolutePath
       fields {
@@ -43,7 +40,6 @@ export const query = graphql`
       }
       frontmatter {
         title
-        category
       }
     }
     authorNote: markdownRemark(fileAbsolutePath: { regex: "/authorNote/" }) {
