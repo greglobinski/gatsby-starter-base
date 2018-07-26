@@ -76,6 +76,20 @@ ul {
   background: #ccc;
 }
 
+.blog.showit .meta.showit {
+  background: #bbb;
+  margin: 20px 0;
+}
+
+.blog.showit ul {
+  list-style: none;
+  margin: 0;
+}
+
+.blogItem.showit h1 {
+  font-size: 1.8em;
+}
+
 .bodytext.showit p {
   margin: 0 0 2em 0;
   line-height: 1.3;
@@ -83,6 +97,10 @@ ul {
 
 .bodytext.showit p:nth-last-child(2) {
   margin: 0;
+}
+
+.bodytext:nth-last-child(2) {
+  margin-bottom: 0;
 }
 
 .bodytext.showit h2,
@@ -112,7 +130,6 @@ ul {
 
 .footer.showit,
 .menu.showit,
-.blogItem.showit,
 .comments.showit {
   margin-bottom: 0;
 }

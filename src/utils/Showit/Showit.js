@@ -9,7 +9,7 @@ class Showit extends React.Component {
 
   initPresentation = () => {
     const classes = [
-      'article',
+      'article ',
       'branding',
       'bodytext',
       'footer',
