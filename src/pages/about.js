@@ -4,19 +4,19 @@ import Article from '../components/Article';
 import Heading from '../components/Article/Heading';
 import Bodytext from '../components/Article/Bodytext';
 
-const IndexPage = props => {
+const AboutPage = props => {
   const { location } = props;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} seoTitle="Page A">
       <Article>
-        <Heading title="Hello world!" />
+        <Heading title="About" />
         <Bodytext>
-          <p>That's a home page content</p>
+          <p>Well, how to start...</p>
         </Bodytext>
       </Article>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default AboutPage;
