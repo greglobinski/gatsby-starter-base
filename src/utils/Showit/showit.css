@@ -1,0 +1,103 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+}
+
+a {
+  display: inline-block;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.showit {
+  font-family: sans-serif;
+  padding: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.showit > .label {
+  transform: scale(1);
+  transition: 0.3s;
+  color: #eee;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  display: inline-block;
+  background: #aaa;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  padding: 2px 4px 3px;
+}
+
+.showit:hover > .label {
+  transform: scale(1.3);
+}
+
+.showit a {
+  color: rgb(70, 70, 168);
+}
+
+.layout.showit {
+  background: #eee;
+}
+
+.header.showit,
+.article.showit,
+.footer.showit {
+  background: #ddd;
+}
+
+.footer.showit,
+.bodytext.showit {
+  margin-bottom: 0;
+}
+
+.branding.showit,
+.menu.showit,
+.heading.showit,
+.meta.showit,
+.bodytext.showit {
+  background: #ccc;
+}
+
+.branding.showit {
+  display: block;
+}
+
+.branding.showit h1 {
+  font-size: 1em;
+}
+.branding.showit h2 {
+  font-size: 0.8em;
+}
+
+.heading.showit {
+  font-size: 1.4em;
+}
+
+.footer.showit {
+  font-size: 0.9em;
+}
+
+.footer.showit ul {
+  margin-bottom: 1em;
+}
+
+.footer.showit li {
+  padding: 0.1em 0;
+}

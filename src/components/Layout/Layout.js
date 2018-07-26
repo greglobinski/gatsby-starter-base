@@ -6,6 +6,7 @@ import config from '../../../content/meta/config';
 import menu from '../../../content/meta/menu';
 import Footer from '../Footer';
 import Header from '../Header';
+import Showit from '../../utils/Showit';
 
 const Layout = props => {
   const { children } = props;
@@ -31,6 +32,7 @@ const Layout = props => {
             <Header title={headerTitle} subTitle={headerSubTitle} menu={menu} />
             <main>{children}</main>
             <Footer footnote={footnote} />
+            <Showit />
           </div>
         );
       }}
