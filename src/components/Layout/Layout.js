@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import config from '../../../content/meta/config';
+import menu from '../../../content/meta/menu';
 import Footer from '../Footer';
 import Header from '../Header';
 import Seo from '../Seo';
@@ -37,7 +38,7 @@ const Layout = props => {
 
         return (
           <div className="layout">
-            <Header title={headerTitle} subTitle={headerSubTitle} />
+            <Header title={headerTitle} subTitle={headerSubTitle} menu={menu} />
             <main>{children}</main>
             <Footer footnote={footnote} />
             <Seo
