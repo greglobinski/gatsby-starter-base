@@ -58,7 +58,8 @@ ul {
 
 .header.showit,
 .article.showit,
-.footer.showit {
+.footer.showit,
+.blog.showit {
   background: #ddd;
 }
 
@@ -66,8 +67,22 @@ ul {
 .menu.showit,
 .heading.showit,
 .meta.showit,
-.bodytext.showit {
+.bodytext.showit,
+.blogItem.showit {
   background: #ccc;
+}
+
+.bodytext.showit p {
+  margin: 0 0 2em 0;
+}
+
+.bodytext.showit p:last-child {
+  margin: 0;
+}
+
+.bodytext.showit h2,
+.bodytext.showit h3 {
+  margin: 0 0 1em 0;
 }
 
 .menu.showit ul {
@@ -92,7 +107,8 @@ ul {
 
 .footer.showit,
 .bodytext.showit,
-.menu.showit {
+.menu.showit,
+.blogItem.showit {
   margin-bottom: 0;
 }
 .branding.showit {
@@ -107,7 +123,7 @@ ul {
 }
 
 .heading.showit {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .footer.showit {
