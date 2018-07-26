@@ -17,7 +17,7 @@ const NextPrev = props => {
   } = props;
 
   return (
-    <div className="nextprev">
+    <div className="nextPrev">
       {nextSlug && (
         <Link to={nextSlug}>
           <FaArrowRight />

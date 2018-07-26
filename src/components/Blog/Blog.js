@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Item from './Item';
+import BlogItem from './BlogItem';
 
 const Blog = props => {
   const { posts } = props;
 
   return (
-    <ul className="blog">
-      {posts.map(post => {
-        const {
-          fields: { identifier },
-        } = post;
-        return <Item key={identifier} post={post} />;
-      })}
-    </ul>
+    <div className="blog">
+      <ul>
+        {posts.map(post => {
+          const {
+            fields: { identifier },
+          } = post;
+          return <BlogItem key={identifier} post={post} />;
+        })}
+      </ul>
+    </div>
   );
 };
 
