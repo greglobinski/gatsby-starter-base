@@ -30,6 +30,7 @@ const Post = props => {
     authorNote,
     next: nextPost,
     prev: prevPost,
+    siteUrl,
   } = props;
 
   return (
@@ -43,13 +44,14 @@ const Post = props => {
         <Author note={authorNote} />
         <Share post={post} />
         <NextPrev next={nextPost} prev={prevPost} />
-        <Comments slug={slug} />
+        <Comments slug={slug} siteUrl={siteUrl} />
       </footer>
     </React.Fragment>
   );
 };
 
 Post.propTypes = {
+  siteUrl: PropTypes.string.isRequired,
   post: PropTypes.object.isRequired,
   authorNote: PropTypes.string,
   next: PropTypes.object,

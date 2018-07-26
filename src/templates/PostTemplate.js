@@ -8,6 +8,8 @@ import Article from '../components/Article';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
 
+import config from '../../content/meta/config';
+
 const PostTemplate = props => {
   const {
     data: {
@@ -16,10 +18,12 @@ const PostTemplate = props => {
     },
   } = props;
 
+  const { siteUrl } = config;
+
   return (
     <Layout>
       <Article>
-        <Post post={post} authorNote={authorNote} />
+        <Post post={post} authorNote={authorNote} siteUrl={siteUrl} />
       </Article>
     </Layout>
   );
