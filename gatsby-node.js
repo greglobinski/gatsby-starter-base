@@ -39,6 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve('./src/templates/PostTemplate.js');
+    const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
     const categoryTemplate = path.resolve(
       './src/templates/CategoryTemplate.js'
     );
@@ -47,7 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(`
         {
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "//posts//" } }
+            filter: { fileAbsolutePath: { regex: "//posts|pages//" } }
             sort: { fields: [fields___prefix], order: DESC }
             limit: 1000
           ) {
@@ -120,6 +121,22 @@ exports.createPages = ({ graphql, actions }) => {
               identifier,
               prev,
               next,
+            },
+          });
+        });
+
+        // and pages.
+        const pages = items.filter(item =>
+          /pages/.test(item.node.fileAbsolutePath)
+        );
+        pages.forEach(({ node }) => {
+          const slug = node.fields.slug;
+
+          createPage({
+            path: slug,
+            component: pageTemplate,
+            context: {
+              slug,
             },
           });
         });
