@@ -46,7 +46,7 @@ CategoryTemplate.propTypes = {
 export default CategoryTemplate;
 
 export const categoryQuery = graphql`
-  query PostsByCategory($category: String) {
+  query CategoryTemplateQuery($category: String) {
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___prefix], order: DESC }
