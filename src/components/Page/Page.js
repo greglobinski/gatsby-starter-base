@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-//import Loadable from "react-loadable";
 
-import Heading from '../Article/Heading';
+import Article from '../Article';
 import Bodytext from '../Article/Bodytext';
+import Heading from '../Article/Heading';
 
 const Page = props => {
   const {
@@ -14,12 +14,12 @@ const Page = props => {
   } = props;
 
   return (
-    <React.Fragment>
+    <Article className="page">
       <header>
         <Heading title={title} />
       </header>
       <Bodytext html={html} />
-    </React.Fragment>
+    </Article>
   );
 };
 
