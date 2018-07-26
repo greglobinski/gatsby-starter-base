@@ -7,8 +7,6 @@ import menu from '../../../content/meta/menu';
 import Footer from '../Footer';
 import Header from '../Header';
 
-import '../../styles/graph.css';
-
 const Layout = props => {
   const { children } = props;
 
