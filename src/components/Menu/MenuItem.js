@@ -6,7 +6,7 @@ const MenuItem = props => {
   const { label, to, icon: Icon } = props;
 
   return (
-    <li>
+    <li className="menuItem">
       <Link to={to}>
         {Icon && <Icon />}
         {label}
