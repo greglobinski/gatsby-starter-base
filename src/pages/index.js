@@ -5,10 +5,8 @@ import Heading from '../components/Article/Heading';
 import Bodytext from '../components/Article/Bodytext';
 
 const IndexPage = props => {
-  const { location } = props;
-
   return (
-    <Layout location={location}>
+    <Layout>
       <Article>
         <Heading title="Hello world!" />
         <Bodytext>

@@ -4350,10 +4350,6 @@ executable@^1.0.0:
   dependencies:
     meow "^3.1.0"
 
-exenv@^1.2.1:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
-
 exif-parser@^0.1.9:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/exif-parser/-/exif-parser-0.1.12.tgz#58a9d2d72c02c1f6f02a0ef4a9166272b7760922"
@@ -4978,12 +4974,6 @@ gatsby-plugin-page-creator@^2.0.0-beta.5:
     lodash "^4.17.4"
     parse-filepath "^1.0.1"
     slash "^1.0.0"
-
-gatsby-plugin-react-helmet@3.0.0-beta.4:
-  version "3.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.0.0-beta.4.tgz#065bb67fec37e86db536c51d7a5006eee2ce89b9"
-  dependencies:
-    "@babel/runtime" "7.0.0-beta.52"
 
 gatsby-plugin-sharp@2.0.0-beta.7:
   version "2.0.0-beta.7"
@@ -9271,7 +9261,7 @@ prompts@^0.1.9:
     kleur "^1.0.0"
     sisteransi "^0.1.1"
 
-prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -9482,15 +9472,6 @@ react-facebook@^5.0.3:
     prop-types "^15.6.1"
     react-spinner-children "^1.0.8"
 
-react-helmet@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/react-helmet/-/react-helmet-5.2.0.tgz#a81811df21313a6d55c5f058c4aeba5d6f3d97a7"
-  dependencies:
-    deep-equal "^1.0.1"
-    object-assign "^4.1.1"
-    prop-types "^15.5.4"
-    react-side-effect "^1.1.0"
-
 react-hot-loader@^4.1.0:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.3.4.tgz#4f9bdd55bb20d77a6ae8931fa1c187e5f0ce6279"
@@ -9538,13 +9519,6 @@ react-router@^4.1.1, react-router@^4.3.1:
     path-to-regexp "^1.7.0"
     prop-types "^15.6.1"
     warning "^4.0.1"
-
-react-side-effect@^1.1.0:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"
-  dependencies:
-    exenv "^1.2.1"
-    shallowequal "^1.0.1"
 
 react-spinner-children@^1.0.8:
   version "1.0.8"
@@ -10440,7 +10414,7 @@ shallow-compare@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
 
-shallowequal@^1.0.1, shallowequal@^1.0.2:
+shallowequal@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
 

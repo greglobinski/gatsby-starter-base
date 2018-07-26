@@ -5,10 +5,8 @@ import Heading from '../components/Article/Heading';
 import Bodytext from '../components/Article/Bodytext';
 
 const ContactPage = props => {
-  const { location } = props;
-
   return (
-    <Layout location={location} seoTitle="Page A">
+    <Layout>
       <Article>
         <Heading title="Contact" />
         <Bodytext>
