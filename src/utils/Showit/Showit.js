@@ -18,6 +18,7 @@ class Showit extends React.Component {
       'layout',
       'meta',
       'menu',
+      'menuItem',
     ];
 
     const components = document.querySelectorAll('[class]');
