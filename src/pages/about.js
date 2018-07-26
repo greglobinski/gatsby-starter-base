@@ -8,7 +8,9 @@ const AboutPage = props => {
   return (
     <Layout>
       <Article>
-        <Heading title="About" />
+        <Heading>
+          <h1>About</h1>
+        </Heading>
         <Bodytext>
           <p>Well, how to start...</p>
         </Bodytext>

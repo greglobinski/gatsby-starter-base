@@ -8,9 +8,7 @@ const Heading = props => {
   return <header>{title ? <h1>{title}</h1> : children}</header>;
 =======
   return (
-    <header className="heading">
-      {title ? <h1>{title}</h1> : { children }}
-    </header>
+    <header className="heading">{title ? <h1>{title}</h1> : children}</header>
   );
 >>>>>>> minimal
 };
