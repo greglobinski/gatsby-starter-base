@@ -43,8 +43,5 @@ export const query = graphql`
         title
       }
     }
-    authorNote: markdownRemark(fileAbsolutePath: { regex: "/authorNote/" }) {
-      html
-    }
   }
 `;

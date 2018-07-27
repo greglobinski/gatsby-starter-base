@@ -71,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         const items = result.data.allMarkdownRemark.edges;
 
-        // and pages.
+        // create pages
         const pages = items.filter(item =>
           /pages/.test(item.node.fileAbsolutePath)
         );
