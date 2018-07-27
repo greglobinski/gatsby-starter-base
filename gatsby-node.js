@@ -125,7 +125,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
         });
 
-        // and pages.
+        // and pages
         const pages = items.filter(item =>
           /pages/.test(item.node.fileAbsolutePath)
         );
