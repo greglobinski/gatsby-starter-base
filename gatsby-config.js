@@ -35,7 +35,7 @@ module.exports = {
         path: `${__dirname}/content/pages/`,
       },
     },
-    // `gatsby-transformer-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-catch-links`,
     {
