@@ -2,7 +2,7 @@
 title: Two things are infinite the universe and human stupidity
 subTitle: And I'm not sure about the universe.
 category: "sayings"
-cover: photo-1490474418585-ba9bad8fd0ea-cover.jpg
+cover: photo-1490474418585-ba9bad8fd0ea.jpg
 ---
 
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [adipiscing](http://google.com) eu pulvinar vel, sodales vitae dui. :thumbsup: :smile: :sparkler:

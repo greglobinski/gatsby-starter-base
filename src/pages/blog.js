@@ -44,7 +44,13 @@ export const query = graphql`
             title
             category
             cover {
-              id
+              children {
+                ... on ImageSharp {
+                  fluid(maxWidth: 800, maxHeight: 300, cropFocus: ENTROPY) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }

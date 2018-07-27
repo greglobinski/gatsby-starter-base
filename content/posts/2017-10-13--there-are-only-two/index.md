@@ -1,7 +1,7 @@
 ---
 title: There are only two ways to live your life. 
 subTitle: One is as though nothing is a miracle. The other is as though everything is a miracle.
-cover: photo-1451324119451-db0ac857463c-cover.jpg
+cover: photo-1451324119451-db0ac857463c.jpg
 ---
 
 ![unsplash.com](./photo-1451324119451-db0ac857463c.jpg)

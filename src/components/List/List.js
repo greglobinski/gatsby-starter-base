@@ -2,24 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
+import ListItem from './ListItem';
+
 const List = props => {
   const { items } = props;
 
   return (
-    <ul className="list">
-      {items.map(item => {
-        const {
-          frontmatter: { title },
-          fields: { slug },
-        } = item;
+    <div class="list">
+      <ul>
+        {items.map(item => {
+          const {
+            frontmatter: { title },
+            fields: { slug },
+          } = item;
 
-        return (
-          <li key={slug}>
-            <Link to={slug}>{title}</Link>
-          </li>
-        );
-      })}
-    </ul>
+          return <ListItem key={slug} to={slug} title={title} />;
+        })}
+      </ul>
+    </div>
   );
 };
 
