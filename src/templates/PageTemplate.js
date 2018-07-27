@@ -9,10 +9,15 @@ import Page from '../components/Page';
 import Seo from '../components/Seo';
 
 const PageTemplate = props => {
+  console.log(props);
   const {
-    data: { page },
-    frontmatter: { title },
-    fields: { slug },
+    data: {
+      page,
+      page: {
+        frontmatter: { title },
+        fields: { slug },
+      },
+    },
   } = props;
 
   return (
