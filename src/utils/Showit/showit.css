@@ -143,6 +143,7 @@ ul {
 .menu.showit ul {
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .menuItem.showit {

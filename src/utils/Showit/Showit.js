@@ -33,22 +33,22 @@ class Showit extends React.Component {
 
   initBar = () => {
     const bar = document.createElement('DIV');
-    bar.classList.add('bar');
-
     const barLabel = document.createElement('LABEL');
-    const barTxt = document.createTextNode('Show components structure');
-    barLabel.appendChild(barTxt);
+    const barTxt = document.createTextNode(
+      'Show a structure of the components'
+    );
     const barCheck = document.createElement('INPUT');
 
+    bar.classList.add('bar');
+    barLabel.appendChild(barTxt);
     barCheck.type = 'checkbox';
 
     if (sessionStorage.getItem('showit') === 'yes') {
       barCheck.checked = true;
     }
+
     barLabel.appendChild(barCheck);
-
     bar.appendChild(barLabel);
-
     document.body.appendChild(bar);
   };
 
