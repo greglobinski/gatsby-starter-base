@@ -20,18 +20,18 @@ const NextPrev = props => {
     <div className="nextPrev">
       {nextSlug && (
         <Link to={nextSlug}>
-          <FaArrowRight />
-          <h4>
+          <p>
+            <FaArrowRight />
             {nextTitle} <time>{nextPrefix} </time>
-          </h4>
+          </p>
         </Link>
       )}
       {prevSlug && (
         <Link to={prevSlug}>
-          <FaArrowLeft />
-          <h4>
+          <p>
+            <FaArrowLeft />
             {prevTitle} <time>{prevPrefix}</time>
-          </h4>
+          </p>
         </Link>
       )}
     </div>
