@@ -4,11 +4,67 @@ import './showit.css';
 
 class Showit extends React.Component {
   componentDidMount() {
-    this.initPresentation();
+    this.initBar();
+
+    if (sessionStorage.getItem('showit') === 'yes') {
+      this.showIt();
+    }
+
+    document.querySelector('body').addEventListener('change', this.toggleShow);
   }
 
-  initPresentation = () => {
+  componentWillUnmount() {
+    document
+      .querySelector('body')
+      .removeEventListener('change', this.toggleShow);
+  }
+
+  toggleShow = event => {
+    if (event.target.tagName.toLowerCase() === 'input') {
+      if (event.target.checked) {
+        this.showIt();
+        sessionStorage.setItem('showit', 'yes');
+      } else {
+        this.hideIt();
+        sessionStorage.setItem('showit', 'no');
+      }
+    }
+  };
+
+  initBar = () => {
+    const bar = document.createElement('DIV');
+    bar.classList.add('bar');
+
+    const barLabel = document.createElement('LABEL');
+    const barTxt = document.createTextNode('Show components structure');
+    barLabel.appendChild(barTxt);
+    const barCheck = document.createElement('INPUT');
+
+    barCheck.type = 'checkbox';
+
+    if (sessionStorage.getItem('showit') === 'yes') {
+      barCheck.checked = true;
+    }
+    barLabel.appendChild(barCheck);
+
+    bar.appendChild(barLabel);
+
+    document.body.appendChild(bar);
+  };
+
+  hideIt = () => {
+    const components = document.querySelectorAll('.showit');
+
+    for (let i = components.length; i > 0; i--) {
+      const label = components[i - 1].querySelector('.label');
+      components[i - 1].removeChild(label);
+      components[i - 1].classList.remove('showit');
+    }
+  };
+
+  showIt = () => {
     const classes = [
+      'article',
       'article ',
       'branding',
       'bodytext',
@@ -32,6 +88,7 @@ class Showit extends React.Component {
     ];
 
     const components = document.querySelectorAll('[class]');
+
     components.forEach(comp => {
       const name = comp.getAttribute('class');
 
