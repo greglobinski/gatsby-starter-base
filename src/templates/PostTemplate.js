@@ -19,13 +19,20 @@ const PostTemplate = props => {
       },
       authorNote: { html: authorNote },
     },
+    pageContext: { next, prev },
   } = props;
 
   const { siteUrl } = config;
 
   return (
     <Layout>
-      <Post post={post} authorNote={authorNote} siteUrl={siteUrl} />
+      <Post
+        post={post}
+        next={next}
+        prev={prev}
+        authorNote={authorNote}
+        siteUrl={siteUrl}
+      />
       <Seo title={title} path={slug} />
     </Layout>
   );

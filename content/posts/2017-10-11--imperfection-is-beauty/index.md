@@ -1,7 +1,7 @@
 ---
 title: Imperfection is beauty, madness is genius
 subTitle: And it's better to be absolutely ridiculous than absolutely boring 
-cover: photo-1469461084727-4bfb496cf55a-cover.jpg
+cover: photo-1469461084727-4bfb496cf55a.jpg
 ---
 
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [bibendum](http://google.com) eu pulvinar vel, sodales vitae dui.

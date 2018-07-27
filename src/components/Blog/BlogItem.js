@@ -11,13 +11,22 @@ const BlogItem = props => {
     post: {
       excerpt,
       fields: { slug, prefix },
-      frontmatter: { title, category },
+      frontmatter: {
+        title,
+        category,
+        cover: {
+          children: [{ fluid }],
+        },
+      },
     },
   } = props;
+
+  console.log(fluid);
 
   return (
     <li className="blogItem">
       <Link to={slug} key={slug} className="link">
+        <Img fluid={fluid} />
         <h1>{title}</h1>
         <p className="meta">
           <span>
