@@ -1,7 +1,6 @@
 <div align="center">
     <img src="./assets/logo-250.png" alt="Logo" width="200"/>
     <h1>gatsby-starter-base</h1>
-    <h8>by greg</h8> 
 </div>
 
 ## Demo
