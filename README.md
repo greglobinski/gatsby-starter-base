@@ -1,6 +1,6 @@
 <div align="center">
     <img src="./assets/logo-250.png" alt="Logo" width="200"/>
-    <h1 style="font-size: 35px; margin: 5px 0 50px; border: 0;">gatsby-starter-base <span style="font-size: 11px;display: block; margin: 3px 0 0 0; font-weight: normal; letter-spacing: .3em;">by Greg</span></h1>
+    <h1 style="font-size: 35px; margin: 5px 0 50px; border: 0;">gatsby-starter-base <p style="font-size: 11px;display: block; margin: 3px 0 0 0; font-weight: normal; letter-spacing: .3em;">by Greg</p></h1>
 </div>
 
 ## Demo
