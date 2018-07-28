@@ -175,7 +175,7 @@ More tips for managing (marging) different branches soon. So stay tuned by follo
 
 If you find this idea of progressively enhanced versions of a starter do not forget to give the repo a Star. Thank you. 
 
-Feel free to leave the feedback, tweet me or open an issue.
+Feel free to leave feedback by opening an issue.
 
 ## License
 
