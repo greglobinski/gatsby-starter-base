@@ -1,8 +1,8 @@
 <div align="center">
     <img src="./assets/logo-250.png" alt="Logo" width="200"/>
-    <h1 style="font-size: 35px; margin: 5px 0 50px; border: 0;">gatsby-starter-base <p style="font-size: 11px;display: block; margin: 3px 0 0 0; font-weight: normal; letter-spacing: .3em;">by Greg</p></h1>
+    <h1>gatsby-starter-base</h1>
+    <h8>by greg</h8> 
 </div>
-
 ## Demo
 
 #### [Open Demo](https://gatsby-starter-base.greglobinski.com/)
@@ -23,7 +23,7 @@ You can choose between:
 
 All starters deliver an opinionated structure of files and components but no styles at all.
 
-<p style="background: #F5B041; padding: 5px 10px; border-radius: 2px; color: white;">Please remember that GatsbyJS v2 is still in beta.</p>
+> Please remember that GatsbyJS v2 is still in beta.
 
 ## Folder structure
 ```
@@ -124,7 +124,7 @@ gatsby develop
 
 If you want to install any other version of the starter than `master` you need another procedure, you need to clone the repo.
 
-<p style="background: #F5B041; padding: 5px 10px; border-radius: 2px; color: white;">If you know what you do you can of course clone the original repo. But if you not please fork it first.</p>
+> If you know what you do you can of course clone the original repo. But if you not please fork it first.
 
 Log in to your Github account. Open the [repo](https://github.com/greglobinski/gatsby-starter-base) page and click **Fork** button in the top right corrner. Then open the page of your forked repo - https://github.com/[yourgithubname]/gatsby-starter-base - and get the link from the green **Clone or download** button. 
 
