@@ -102,7 +102,7 @@ root
 - XML **site map**
 - **SVG** icons - [react-icons]
 (https://www.npmjs.com/package/react-icons)
-- **SEO** (robot.txt, genearl and OpenGraph tags)
+- **SEO** (robot.txt, general and OpenGraph tags)
 - **Linting*8 - (ESLint)[https://eslint.org/] with [cra config](https://www.npmjs.com/package/eslint-config-react-app)
 - Code **formating** - [Prettier](https://github.com/prettier/prettier)
 - Environment **variables - [dotenv](https://www.npmjs.com/package/dotenv)
@@ -123,24 +123,24 @@ gatsby develop
 
 ### Advanced usage
 
-If you want to install any other version of the starter than `master` you need another procedure, you need to clone the repo.
+If you want to install any other version of the starter than `master` you need a different procedure, you need to clone the repo.
 
 > If you know what you do you can of course clone the original repo. But if you not please fork it first.
 
-Log in to your Github account. Open the [repo](https://github.com/greglobinski/gatsby-starter-base) page and click **Fork** button in the top right corrner. Then open the page of your forked repo - https://github.com/[yourgithubname]/gatsby-starter-base - and get the link from the green **Clone or download** button. 
+Log in to your Github account. Open the [repo](https://github.com/greglobinski/gatsby-starter-base) page and click **Fork** button in the top right corner. Then open the page of your forked repo - https://github.com/[yourgithubname]/gatsby-starter-base - and get the link from the green **Clone or download** button. 
 
 ```
 git clone [URL_OF_YOUR_FORKED_REPOSITORY] [NEW_DIRECTORY_FOR_YOUR_SITE]
 
 cd [NEW_DIRECTORY_FOR_YOUR_SITE]
 ```
-Now list branches of the repo
+Now list branches of the repo.
 
 ```
 git branch -a 
 ```
 You will see a list of branches but only one is traced locally - `master`.
-Let's assumme that you want to install the `minimal` version. You have to tell git to trace the branch.
+Let's assume that you want to install the `minimal` version. You have to tell git to trace the branch.
 
 ```
 git checkout --track -b minimal origin/minimal
@@ -170,7 +170,7 @@ As before you can use `npm` instead of `yarn`.
 
 You can repeat the procedure with any of the branches. 
 
-More tips for managing (marging) different branches soon. So stay tuned by following me here on github or Twitter [@greglobinski](https://twitter.com/greglobinski)
+More tips for managing (merging) different branches soon. So stay tuned by following me here on github or Twitter [@greglobinski](https://twitter.com/greglobinski)
 
 ## Support
 
