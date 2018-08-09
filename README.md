@@ -1,12 +1,13 @@
+The project is abandoned in favor of [gatsby-starter-kit](https://github.com/greglobinski/gatsby-starter-kit)
+--- 
+
+ 
 <div align="center">
     <img src="./assets/logo-250.png" alt="Logo" width="200"/>
     <h1>gatsby-starter-base</h1>
     <img src="./assets/gatsby-starter-base-demo.gif" />
 </div>
 
-### Demo
-
-#### [Open Demo](https://gatsby-starter-base.greglobinski.com/)
 
 ## Description
 
